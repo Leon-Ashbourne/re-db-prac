@@ -13,7 +13,6 @@ const date = currentDate.getDate() + "/"
             // + currentDate.getHours() + ":" 
             // + currentDate.getMinutes();
 
-
 const SQL = `
     CREATE TABLE IF NOT EXISTS user_messages (
         id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -21,10 +20,10 @@ const SQL = `
         text TEXT,
         add VARCHAR(255)
     );
-
+ 
     INSERT INTO user_messages (username, text, add)
-    VALUES ("Amon", "this is one message", ${date}),
-    ("Charlie", "this is one of a kind", ${date});
+    VALUES ('Amon', 'this is one message', ${date}),
+    ('Charlie', 'this is one of a kind', ${date});
 
 `
 
@@ -40,7 +39,6 @@ async function main() {
 
     console.log("done...");
 }
-
 
 main();
 
