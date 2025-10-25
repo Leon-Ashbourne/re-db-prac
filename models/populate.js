@@ -31,8 +31,7 @@ const SQL = `
 async function main() {
     console.log("populating....");
     const client = new Client({
-        connectionString: "postgresql://the-saint:leon@localhost:5432/messages",
-        // connectionString: `postgresql://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@localhost:${process.env.DATABASE_PORT}/${process.env.DATABASE_NAME}`,
+        connectionString: `postgresql://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@localhost:${process.env.DATABASE_PORT}/${process.env.DATABASE_NAME}`,
     })
 
     await client.connect();
